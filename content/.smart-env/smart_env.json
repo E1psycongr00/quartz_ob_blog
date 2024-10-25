@@ -1,0 +1,24 @@
+{
+  "smart_blocks": {
+    "embed_model": {
+      "model_key": "TaylorAI/bge-micro-v2",
+      "None": {}
+    }
+  },
+  "smart_sources": {
+    "embed_model": {
+      "model_key": "TaylorAI/bge-micro-v2",
+      "TaylorAI/bge-micro-v2": {}
+    }
+  },
+  "file_exclusions": "Untitled",
+  "folder_exclusions": ".git, .obsidian, .smart-env, .trash, 1.Projects, 2.Area, 3.Resources, 4.Archive, attachments, Excalidraw, smart-chats, templates, 나의 마일스톤, 데일리",
+  "is_obsidian_vault": true,
+  "smart_notices": {
+    "muted": {
+      "error in embedding search": true,
+      "Notice muted": true
+    }
+  },
+  "smart_chats_folder": "smart-chats"
+}
