@@ -8,9 +8,9 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/E1psycongr00",
     },
+   
   }),
 }
 
@@ -27,10 +27,38 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
+    Component.DesktopOnly(Component.RecentNotes({limit: 10})),
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({
+      localGraph: {
+        drag: true,
+        zoom: true,
+        depth: 1,
+        scale: 1.5,
+        repelForce: 0.8,
+        centerForce: 0.5,
+        linkDistance: 35,
+        fontSize: 0.6,
+        opacityScale: 1.5,
+        removeTags: [],
+        showTags: false
+      },
+      globalGraph: {
+        drag: true,
+        zoom: true,
+        depth: -1,
+        scale: 0.9,
+        repelForce: 0.9,
+        centerForce: 0.7,
+        linkDistance: 40,
+        fontSize: 0.6,
+        opacityScale: 1,
+        removeTags: [], // what tags to remove from the graph
+        showTags: true, // whether to show tags in the graph
+      }
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -44,6 +72,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
+    Component.DesktopOnly(Component.RecentNotes({limit: 10})),
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [],
