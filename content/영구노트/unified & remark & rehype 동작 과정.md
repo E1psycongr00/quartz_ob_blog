@@ -34,7 +34,7 @@ input은 text이다. 이를 Parser는 넣으면 Parser는 구문을 분석하고
 
 ## 연결 노트
 - [[AST]]
-- [[unified]]
+-
 - [[markdown에 커스텀 문법 적용하기]]
 
 
